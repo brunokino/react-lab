@@ -48,8 +48,8 @@ function Sidebar({ color, image, routes }) {
               />
             </div>
           </a>
-          <a className="simple-text" href="http://www.creative-tim.com">
-            Creative Tim
+          <a className="simple-text" href="#">
+            Kinoshita's App
           </a>
         </div>
         <Nav>

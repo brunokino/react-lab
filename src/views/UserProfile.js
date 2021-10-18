@@ -1,4 +1,6 @@
 import React from "react";
+import github from "../services/github";
+import githubAvatar from "../services/githubAvatar";
 
 // react-bootstrap components
 import {
@@ -157,54 +159,32 @@ function User() {
                 <img
                   alt="..."
                   src={
-                    require("assets/img/photo-1431578500526-4d9613015464.jpeg")
+                    require("assets/img/1500x500.jfif")
                       .default
                   }
                 ></img>
               </div>
               <Card.Body>
                 <div className="author">
-                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  <a href={githubAvatar()} target="_blank">
                     <img
                       alt="..."
                       className="avatar border-gray"
-                      src={require("assets/img/faces/face-3.jpg").default}
+                      src={require("assets/img/faces/AWS.png").default}
                     ></img>
-                    <h5 className="title">Mike Andrew</h5>
+                    <h5 className="title">{github()}</h5>
                   </a>
-                  <p className="description">michael24</p>
                 </div>
-                <p className="description text-center">
-                  "Lamborghini Mercy <br></br>
-                  Your chick she so thirsty <br></br>
-                  I'm in that two seat Lambo"
-                </p>
               </Card.Body>
               <hr></hr>
               <div className="button-container mr-auto ml-auto">
                 <Button
                   className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                  href={githubAvatar()} 
+                  target="_blank"
                   variant="link"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                </Button>
-                <Button
-                  className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  variant="link"
-                >
-                  <i className="fab fa-twitter"></i>
-                </Button>
-                <Button
-                  className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  variant="link"
-                >
-                  <i className="fab fa-google-plus-square"></i>
+                  <i className="fab fa-github"></i>
                 </Button>
               </div>
             </Card>
